@@ -1,0 +1,12 @@
+---
+  serverntp: acd
+  keyfile: /etc/chrony/chrony.keys
+  number: 1
+  driftfile: /var/lib/chrony/chrony.drift
+  logdir: /var/log/chrony
+  maxupdate: 100.0
+  dumpdir: /var/lib/chrony
+  logchange: 0.5
+  hwclock: /etc/adjtime
+  
+  

@@ -1,0 +1,30 @@
+---
+  
+  - name: install chrony
+    apt: 
+      name: chrony
+      state: present
+
+
+  - name: configure chrony.conf using templates
+    template:
+      src: chrony.conf.j2
+      dest: /etc/chrony/chrony.conf
+      mode: 0644
+    notify:
+      - restart chrony
+
+
+#  - name: edit /etc/chrony/chrony.conf
+#    lineinfile:
+#      path: /etc/chrony/chrony.conf
+#      regexp: '^pool 2.debian.pool.ntp.org offline iburst'
+#      line: 'server 129.6.15.28 iburst'
+#    notify:
+#      - restart chrony
+#    sudo: yes
+
+  
+
+   
+
